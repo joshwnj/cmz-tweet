@@ -1,0 +1,27 @@
+{
+  "name": "cmz-tweet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "prebuild": "rm -rf dist && mkdir dist && cp src/index.html dist/",
+    "build": "browserify -t cmz/transform -o dist/bundle.js src/index.js",
+    "hot": "watchify -v -p browserify-hmr -t cmz/transform -o dist/bundle.js src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "joshwnj",
+  "license": "MIT",
+  "dependencies": {
+    "cmz": "^0.4.1",
+    "moment": "^2.14.1",
+    "vhtml": "^1.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "browserify-hmr": "^0.3.1",
+    "standard": "^7.1.2",
+    "watchify": "^3.7.0"
+  }
+}
