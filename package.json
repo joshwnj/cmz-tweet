@@ -8,7 +8,8 @@
     "prebuild": "rm -rf dist && mkdir dist && cp src/index.html dist/",
     "build": "browserify -t cmz/transform -o dist/bundle.js src/index.js",
     "hot": "watchify -v -p browserify-hmr -t cmz/transform -o dist/bundle.js src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build && gh-pages -d dist -m \"Updates --skip-ci\""
   },
   "keywords": [],
   "author": "joshwnj",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "browserify": "^13.1.0",
     "browserify-hmr": "^0.3.1",
+    "gh-pages": "git://github.com/markdalgleish/gh-pages#cli-message",
     "standard": "^7.1.2",
     "watchify": "^3.7.0"
   }
