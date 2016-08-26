@@ -3,14 +3,12 @@ const h = require('vhtml')
 const elem = require('../util/elem')
 const flex = require('../shared/flex')
 
-const box = flex({
-  align: 'center',
-  space: 'around'
-})
-
 const styles = cmz.inline('Actions', `
 & {
-  ${box}
+  ${flex({
+     align: 'center',
+     space: 'around'
+  })}
 }
 
 & > button {

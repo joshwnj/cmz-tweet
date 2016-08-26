@@ -15,7 +15,7 @@
   "author": "joshwnj",
   "license": "MIT",
   "dependencies": {
-    "cmz": "^0.4.1",
+    "cmz": "^0.5.0",
     "moment": "^2.14.1",
     "vhtml": "^1.0.0"
   },
